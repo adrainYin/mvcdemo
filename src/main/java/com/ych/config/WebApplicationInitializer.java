@@ -3,6 +3,8 @@ package com.ych.config;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import javax.servlet.Filter;
+
 /**
  * 配置DispetcherServlet
  */
@@ -32,4 +34,12 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
         return new String[]{"/"};
     }
 
+    /**
+     * 该方法将过滤器添加到DispatcherServlet中
+     * @return 返回过滤器列表
+     */
+    @Override
+    protected Filter[] getServletFilters() {
+        return super.getServletFilters();
+    }
 }

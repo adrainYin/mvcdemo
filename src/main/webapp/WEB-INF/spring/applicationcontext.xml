@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--该配置文件是作为spring-root的配置文件，主要是配置与web容器无关的组件-->
+    <!--例如service和dao层对象等, 而springmvc容器主要好似负责对controller组件的管理-->
+
+</beans>

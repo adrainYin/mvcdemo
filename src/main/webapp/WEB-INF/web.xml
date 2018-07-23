@@ -1,24 +1,37 @@
-<!--
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://xmlns.jcp.org/xml/ns/javaee"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          id="WebApp_ID" version="3.1">
     <display-name>springmvcdemo</display-name>
+
+    <!--将springconfig作为context-param初始化进web容器-->
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/spring/applicationcontext.xml</param-value>
+    </context-param>
+    
+    <!--加载contextLoader的监听器-->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    
     <servlet>
-        <servlet-name>spring</servlet-name>
+        <!--会根据servlet-name加载配置文件，加载的文件为dispatcherServlet-context.xml-->
+        <!--该文件会定义一些controller组件的bean-->
+        <!--这个方法可以废除，因为现在都是用java配置-->
+        <servlet-name>dispatcherServlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        <init-param>
-            <param-name>contextConfigLocation</param-name>
-            <param-value>/WEB-INF/applicationContext.xml</param-value>
-        </init-param>
+        <!--可以用init-param指定读取的配置文件的路径-->
+
+        <!--该参数表示web容器启动时候的servlet的加载优先级-->
+        <!--必须是整数，而且值越小表示加载的优先级就越高，0代表web容器启动时立即加载，当值相同时，web容器会自动随机执行加载顺序-->
         <load-on-startup>1</load-on-startup>
     </servlet>
-
     <servlet-mapping>
-        <servlet-name>spring</servlet-name>
+        <servlet-name>dispatcherServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 </web-app>
 
--->

@@ -27,4 +27,9 @@ public class StudentController {
     public String StudentInfoRegister(){
         return "registerForm";
     }
+
+    @RequestMapping(value = "/showRegisterInform",method = RequestMethod.GET)
+    public String showStudentRegisterInform(){
+        return "registerInform";
+    }
 }
