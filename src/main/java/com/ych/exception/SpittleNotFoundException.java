@@ -1,4 +1,4 @@
-package com.ych.model;
+package com.ych.exception;
 
 
 import org.springframework.http.HttpStatus;

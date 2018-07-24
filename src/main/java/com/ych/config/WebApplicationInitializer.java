@@ -1,8 +1,6 @@
 package com.ych.config;
 
-import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
 import javax.servlet.Filter;
 
 /**

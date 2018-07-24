@@ -1,7 +1,7 @@
 package com.ych.controller;
 
 
-import com.ych.model.SpittleNotFoundException;
+import com.ych.exception.SpittleNotFoundException;
 import com.ych.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
 //定义控制器，由dispatcher分发请求并交给控制器拦截
 @Controller

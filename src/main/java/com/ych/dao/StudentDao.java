@@ -13,13 +13,17 @@ public class StudentDao {
         List<Student> list = new ArrayList<>();
 
         Student stu1 = new Student();
-        stu1.setId(1);
-        stu1.setName("Zhang San");
+        stu1.setFirstName("jerry");
+        stu1.setLastName("hello");
+        stu1.setUsername("mike");
+        stu1.setPassword("123000");
         list.add(stu1);
 
         Student stu2 = new Student();
-        stu2.setId(2);
-        stu2.setName("Li Si");
+        stu2.setFirstName("adrain");
+        stu2.setLastName("hao");
+        stu2.setUsername("yinchenhao");
+        stu2.setPassword("123456");
         list.add(stu2);
 
         return list;
