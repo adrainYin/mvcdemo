@@ -7,4 +7,5 @@ import java.util.List;
 public interface SpittleDao {
 
     public List<Spittle> findSpittList(long max, int count);
+    public String saveSpittle(Spittle spittle);
 }
