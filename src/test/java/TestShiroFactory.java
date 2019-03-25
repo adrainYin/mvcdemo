@@ -15,7 +15,7 @@ public class TestShiroFactory {
     @Test
     public void testForShiroFactory(){
 
-        Factory factory = new IniSecurityManagerFactory("/src/shiro.ini");
+        Factory factory = new IniSecurityManagerFactory("shiro.ini");
         org.apache.shiro.mgt.SecurityManager securityManager = (SecurityManager) factory.getInstance();
         SecurityUtils.setSecurityManager(securityManager);
 

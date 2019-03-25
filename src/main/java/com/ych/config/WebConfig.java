@@ -8,11 +8,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 //启用SpringMVC的Config配置，返回的是DispatcherServlet的需要的bean
-@Configuration
-//表示启用SpringMVC配置
-@EnableWebMvc
-//会将组件全部扫描，类似于Spring的ApplicationContext配置
-@ComponentScan("com.ych.*")
+//@Configuration
+////表示启用SpringMVC配置
+//@EnableWebMvc
+////会将组件全部扫描，类似于Spring的ApplicationContext配置
+//@ComponentScan("com.ych.*")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     public InternalResourceViewResolver viewResolver(){
